@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default, :development)
+Dir["#{__dir__}/../lib/*.rb"].sort.each { |f| require f }
+require_relative '../report'
+
+puts <<-'EOF'
+  ___                                          ______                      _
+ / _ \                                         | ___ \                    | |
+/ /_\ \_      _____  ___  ___  _ __ ___   ___  | |_/ /___ _ __   ___  _ __| |_
+|  _  \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ |    // _ \ '_ \ / _ \| '__| __|
+| | | |\ V  V /  __/\__ \ (_) | | | | | |  __/ | |\ \  __/ |_) | (_) | |  | |_
+\_| |_/ \_/\_/ \___||___/\___/|_| |_| |_|\___| \_| \_\___| .__/ \___/|_|   \__|
+                                                         | |
+                                                         |_|
+EOF
+
+if ARGV[0].nil? || ARGV[1].nil?
+  puts Pastel.new.red 'Usage: bin/report ./data/data.txt result.json'
+  exit 1
+end
+
+Report.new(ARGV[0], ARGV[1]).create

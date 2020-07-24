@@ -1,0 +1,12 @@
+AllCops:
+  Excludes:
+    - bin/**
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 10
+  Exclude:
+    - 'test/**/*.rb'
