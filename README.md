@@ -1,11 +1,4 @@
-  ___                                          ______                      _
- / _ \                                         | ___ \                    | |
-/ /_\ \_      _____  ___  ___  _ __ ___   ___  | |_/ /___ _ __   ___  _ __| |_
-|  _  \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ |    // _ \ '_ \ / _ \| '__| __|
-| | | |\ V  V /  __/\__ \ (_) | | | | | |  __/ | |\ \  __/ |_) | (_) | |  | |_
-\_| |_/ \_/\_/ \___||___/\___/|_| |_| |_|\___| \_| \_\___| .__/ \___/|_|   \__|
-                                                         | |
-                                                         |_|
+# Awesome Report
 
 ## DESCRIPTION
 
@@ -29,9 +22,15 @@ session,1,4,Chrome 13,116,2016-12-28
 
 ## USAGE
 
-`bin/report ./data/data.txt result.json`
+Install gems with:
 
-report stores in `reports` dir.
+    bundle install
+
+Create report with:
+
+    bin/report ./data/data.txt result.json
+
+Reports store in `reports` dir.
 
 ## PERFORMANCE OPTIMIZATION
 
